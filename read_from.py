@@ -18,10 +18,10 @@ else:
 for query in sys.argv[2:]:
     query_str = query + "?\n"
     sock.send(query_str.encode())
-    print("query send...")
+    #print("query send...")
     time.sleep(1)
     reply = sock.recv(4096)
-    print("data received...")
+    #print("data received...")
     if (len(out)) > 0:
         out += ':'
     out += reply.decode()[len(query):].strip()
